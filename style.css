@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --Very-pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Violet-blue: hsl(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body {
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+main {
+    background-color: var(--White);
+    display: flex;
+    border-radius: 25px;
+}
+main .your-result {
+    flex: 1;
+    background: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+}
+main .your-result h1 {
+    color: var(--Light-lavender);
+    font-size: 1.5em;
+    margin: 35px 0;
+}
+main .your-result .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--Violet-blue), var(--Persian-blue));
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+main .your-result .circle .number {
+    font-size: 4.4em;
+    font-weight: 700;
+    color: var(--White);
+}
+main .your-result .circle .of {
+    font-size: 1em;
+    color: var(--Light-lavender);
+}
+main .your-result .texts {
+    width: 250px;
+    margin: 0 50px 50px;
+}
+main .your-result .rating {
+    margin: 20px 0;
+    font-size: 2em;
+    color: var(--White);
+    font-weight: 700;
+}
+main .your-result .text {
+    color: var(--Light-lavender);
+    font-size: 18px;
+}
+
+main .summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px; 
+    color: var(--Dark-gray-blue);
+}
+main .summary h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+main .summary .categories {
+    margin: 25px 0;
+}
+main .summary .category {
+    display: flex;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: 800;
+    justify-content: space-between;
+    width: 270px;
+}
+main .summary .category .icon {
+    display: flex;
+    align-items: center;
+}
+main .summary .category .icon .name {
+    margin-left: 10px;
+}
+main .summary .category .score {
+    color: color-mix(in srgb, var(--Dark-gray-blue) 50%, transparent)
+}
+main .summary .category .score span {
+    color: var(--Dark-gray-blue);
+}
+main .summary .category:first-child {
+    background: color-mix(in srgb, var(--light-red) 10%, transparent)
+}
+main .summary .category:first-child .icon {
+    color: var(--light-red);
+}
+main .summary .category:nth-child(2) {
+    background: color-mix(in srgb, var(--orangey-yellow) 10%, transparent)
+}
+main .summary .category:nth-child(2) .icon {
+    color: var(--orangey-yellow);
+}
+main .summary .category:nth-child(3) {
+    background: color-mix(in srgb, var(--green-teal) 10%, transparent)
+}
+main .summary .category:nth-child(3) .icon {
+    color: var(--green-teal);
+}
+main .summary .category:last-child {
+    background: color-mix(in srgb, var(--cobalt-blue) 10%, transparent)
+}
+main .summary .category:last-child .icon {
+    color: var(--cobalt-blue);
+}
+main .summary button {
+    border: none;
+    background-color: var(--Dark-gray-blue);
+    padding: 15px 0;
+    border-radius: 25px;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+    main .your-result {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    main .your-result .texts {
+        width: 300px;
+    }
+    main .summary {
+        align-items: center;
+    }
+    main .summary button {
+        width: 270px;
+    }
+}
